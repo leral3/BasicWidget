@@ -10,8 +10,6 @@
         android:id="@+id/progressLayout"
         android:layout_width="409dp"
         android:layout_height="729dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginEnd="1dp"
         android:gravity="center"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -20,20 +18,16 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ProgressBar
-            android:id="@+id/progressBar"
+            android:id="@+id/progressBar2"
             style="?android:attr/progressBarStyle"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            android:layout_height="wrap_content" />
 
         <TextView
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Downloading..."
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            android:text="Downloading..." />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

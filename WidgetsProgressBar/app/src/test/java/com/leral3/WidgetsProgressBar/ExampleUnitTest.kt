@@ -1,4 +1,4 @@
-package com.leral3.widgetsprogressbar
+package com.leral3.WidgetsProgressBar
 
 import org.junit.Test
 

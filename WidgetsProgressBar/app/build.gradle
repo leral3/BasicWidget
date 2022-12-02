@@ -7,7 +7,7 @@ android {
     compileSdk 32
 
     defaultConfig {
-        applicationId "com.leral3.widgetsprogressbar"
+        applicationId "com.leral3.myapplication"
         minSdk 26
         targetSdk 32
         versionCode 1
@@ -29,6 +29,7 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
     buildFeatures {
         viewBinding true
     }

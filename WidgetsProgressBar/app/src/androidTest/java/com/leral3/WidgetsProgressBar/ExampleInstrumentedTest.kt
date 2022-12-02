@@ -1,4 +1,4 @@
-package com.leral3.widgetsprogressbar
+package com.leral3.WidgetsProgressBar
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
@@ -19,6 +19,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("com.leral3.widgetsprogressbar", appContext.packageName)
+        assertEquals("com.leral3.myapplication", appContext.packageName)
     }
 }
