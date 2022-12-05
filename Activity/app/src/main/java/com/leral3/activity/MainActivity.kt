@@ -22,8 +22,10 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+        var a = SubActivity::class.java
+
         binding.btnStart.setOnClickListener {
-            val intent = Intent(this, SubActivity::class.java)
+            val intent = Intent(this, a)
             intent.putExtra("from1", "Hello Bundle")
             intent.putExtra("from2", 2022)
             intent.putExtra("from3", binding.editMessage.text.toString())
