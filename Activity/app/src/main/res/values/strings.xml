@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Activity</string>
+    <!-- 새로 추가한 문자열 -->
+    <string name="subTitle">서브 액티비티</string>
+    <string name="mainTitle">메인 액티비티</string>
+    <string name="btnStart">서브 액티비티 실행</string>
+</resources>
