@@ -2,6 +2,7 @@ package com.leral3.fragment
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.leral3.DetailFragment
 import com.leral3.ListFragment
 
 class MainActivity : AppCompatActivity() {
@@ -13,9 +14,22 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun setFragment() {
-        /*val listFragment: ListFragment = ListFragment()
+        val listFragment: ListFragment = ListFragment()
         val transaction = supportFragmentManager.beginTransaction()
         transaction.add(R.id.frameLayout, listFragment)
-        transaction.commit()*/
+        transaction.commit()
+    }
+
+    fun goDetail() {
+        val detailFragment = DetailFragment()
+
+        val transaction = supportFragmentManager.beginTransaction()
+        transaction.add(R.id.frameLayout, detailFragment)
+        transaction.addToBackStack("detail")
+        transaction.commit()
+    }
+
+    fun goBack() {
+        onBackPressed()
     }
 }

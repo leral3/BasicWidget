@@ -18,15 +18,16 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragmentLayout"
+        android:id="@+id/frameLayout"
         android:name="com.leral3.ListFragment"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        tools:layout="@layout/fragment_list"
+        android:clickable="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        tools:layout="@layout/fragment_list" />
 
     <!--<FrameLayout
         android:id="@+id/frameLayout"

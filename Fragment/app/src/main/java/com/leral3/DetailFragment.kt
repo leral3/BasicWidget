@@ -8,27 +8,26 @@ import android.view.View
 import android.view.ViewGroup
 import com.leral3.fragment.MainActivity
 import com.leral3.fragment.R
-import com.leral3.fragment.databinding.FragmentListBinding
+import com.leral3.fragment.databinding.FragmentDetailBinding
 
-class ListFragment : Fragment() {
 
-    var mainActivity: MainActivity? =null
+class DetailFragment : Fragment() {
+
+    lateinit var mainActivity: MainActivity
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
-        val binding = FragmentListBinding.inflate(inflater, container, false)
-        binding.btnNext.setOnClickListener {
-            mainActivity?.goDetail()
-        }
+        // Inflate the layout for this fragment
+        val binding = FragmentDetailBinding.inflate(inflater, container, false)
+        binding.btnBack.setOnClickListener { mainActivity.goBack()}
         return binding.root
     }
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
 
-        if (context is MainActivity) mainActivity = context
+        mainActivity = context as MainActivity
     }
 }
