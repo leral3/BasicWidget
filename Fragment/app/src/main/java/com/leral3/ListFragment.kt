@@ -14,15 +14,19 @@ class ListFragment : Fragment() {
 
     var mainActivity: MainActivity? =null
 
+    lateinit var binding: FragmentListBinding
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
 
-        val binding = FragmentListBinding.inflate(inflater, container, false)
+        binding = FragmentListBinding.inflate(inflater, container, false)
         binding.btnNext.setOnClickListener {
             mainActivity?.goDetail()
         }
+        binding.textTitle.text = arguments?.getString("key1")
+        binding.textValue.text = "${arguments?.getInt("key2")}"
         return binding.root
     }
 
@@ -30,5 +34,9 @@ class ListFragment : Fragment() {
         super.onAttach(context)
 
         if (context is MainActivity) mainActivity = context
+    }
+
+    fun setValue(value: String) {
+        binding.textFromActivity.text= value
     }
 }
