@@ -6,10 +6,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.leral3.appliedfragment.databinding.FragmentABinding
+import com.leral3.appliedfragment.databinding.FragmentDetailBinding
 
 
-class FragmentA : Fragment() {
+class DetailFragment : Fragment() {
 
     var mainActivity: MainActivity? = null
 
@@ -18,14 +18,14 @@ class FragmentA : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val binding = FragmentABinding.inflate(inflater, container, false)
-        binding.btnDetail.setOnClickListener {mainActivity?.goDetail()}
+        val binding = FragmentDetailBinding.inflate(inflater, container, false)
+        binding.btnFragmentA.setOnClickListener {mainActivity?.goBack()}
         return binding.root
     }
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
 
-        if (context is MainActivity) mainActivity = context
+        mainActivity = context as MainActivity
     }
 }
